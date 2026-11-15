@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Storage "
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Requesting storage permission…"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/grantPermissionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grant Storage Permission"
+            android:layout_marginBottom="20dp" />
+
+        <!-- One row per fixed path. Each row is identical in structure. -->
+
+        <LinearLayout android:id="@+id/row_camera" style="@style/PathRow">
+            <TextView android:text=" DCIM/Camera" style="@style/PathTitle" />
+            <TextView android:id="@+id/info_camera" style="@style/PathInfo" />
+            <Button android:id="@+id/delete_camera" style="@style/PathDeleteButton" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/row_pictures" style="@style/PathRow">
+            <TextView android:text=" Pictures" style="@style/PathTitle" />
+            <TextView android:id="@+id/info_pictures" style="@style/PathInfo" />
+            <Button android:id="@+id/delete_pictures" style="@style/PathDeleteButton" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/row_download" style="@style/PathRow">
+            <TextView android:text="⬇️ Download" style="@style/PathTitle" />
+            <TextView android:id="@+id/info_download" style="@style/PathInfo" />
+            <Button android:id="@+id/delete_download" style="@style/PathDeleteButton" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/row_movies" style="@style/PathRow">
+            <TextView android:text=" Movies" style="@style/PathTitle" />
+            <TextView android:id="@+id/info_movies" style="@style/PathInfo" />
+            <Button android:id="@+id/delete_movies" style="@style/PathDeleteButton" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/row_recordings" style="@style/PathRow">
+            <TextView android:text=" Recordings" style="@style/PathTitle" />
+            <TextView android:id="@+id/info_recordings" style="@style/PathInfo" />
+            <Button android:id="@+id/delete_recordings" style="@style/PathDeleteButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
